@@ -27,6 +27,7 @@ if (!customElements.get('media-gallery')) {
           thumbnail.addEventListener('click',(event)=>{
             var mediaValue = event.currentTarget.dataset.mediaValue;
             this.updateMasterId(mediaValue);
+            console.log(this.currentVariant);
             if (!this.currentVariant) {
               this.toggleAddButton(true, '', true);
               this.setUnavailable();
