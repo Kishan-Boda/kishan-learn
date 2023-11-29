@@ -134,25 +134,25 @@ if (!customElements.get('media-gallery')) {
 
       // update variant
 
-      onVariantChange() {
-        this.updateOptions();
-        this.updateMasterId();
-        this.toggleAddButton(true, '', false);
-        this.updatePickupAvailability();
-        this.removeErrorMessage();
-        this.updateVariantStatuses();
+      // onVariantChange() {
+      //   this.updateOptions();
+      //   this.updateMasterId();
+      //   this.toggleAddButton(true, '', false);
+      //   this.updatePickupAvailability();
+      //   this.removeErrorMessage();
+      //   this.updateVariantStatuses();
     
-        if (!this.currentVariant) {
-          this.toggleAddButton(true, '', true);
-          this.setUnavailable();
-        } else {
-          this.updateMedia();
-          this.updateURL();
-          this.updateVariantInput();
-          this.renderProductInfo();
-          this.updateShareUrl();
-        }
-      }
+      //   if (!this.currentVariant) {
+      //     this.toggleAddButton(true, '', true);
+      //     this.setUnavailable();
+      //   } else {
+      //     this.updateMedia();
+      //     this.updateURL();
+      //     this.updateVariantInput();
+      //     this.renderProductInfo();
+      //     this.updateShareUrl();
+      //   }
+      // }
     
       updateOptions() {
         
