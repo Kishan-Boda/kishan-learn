@@ -34,8 +34,8 @@ if (!customElements.get('media-gallery')) {
               // this.updateMedia();
               this.updateURL();
               this.updateVariantInput();
-              this.renderProductInfo();
-              this.updateShareUrl();
+              // this.renderProductInfo();
+              // this.updateShareUrl();
             }
           });
         })
