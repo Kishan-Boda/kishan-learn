@@ -146,6 +146,7 @@ if (!customElements.get('media-gallery')) {
         this.currentVariant = this.getVariantData().find((variant) => {
           console.log(123);
           return !variant.options
+          console.log(variant.featured_media.id);
           if(variant.featured_media.id == value) {
             return variant;
           }
