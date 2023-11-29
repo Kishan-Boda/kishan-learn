@@ -192,7 +192,6 @@ if (!customElements.get('media-gallery')) {
         const productForms = document.querySelectorAll(
           `#product-form-${this.dataset.section}, #product-form-installment-${this.dataset.section}`
         );
-         console.log( productForms);
         productForms.forEach((productForm) => {
           const input = productForm.querySelector('input[name="id"]');
           input.value = this.currentVariant.id;
