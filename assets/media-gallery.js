@@ -29,14 +29,16 @@ if (!customElements.get('media-gallery')) {
             this.updateMasterId(mediaValue);
             console.log(this.currentVariant);
             if (typeof this.currentVariant !== 'undefined') {
+            if (!this.currentVariant) {
               this.toggleAddButton(true, '', true);
-              // this.setUnavailable();
+              this.setUnavailable();
             } else {
               // this.updateMedia();
               this.updateURL();
               this.updateVariantInput();
               this.renderProductInfo();
               this.updateShareUrl();
+            }
             }
           });
         })
