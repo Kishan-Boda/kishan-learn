@@ -103,6 +103,18 @@ if (!customElements.get('media-gallery')) {
         this.elements.viewer.slider.setAttribute('role', 'presentation');
         this.elements.viewer.sliderItems.forEach((slide) => slide.setAttribute('role', 'presentation'));
       }
+
+      // update variant
+
+
+
+
+
+
+
+
+
+      
     }
   );
 }
