@@ -188,6 +188,7 @@ if (!customElements.get('media-gallery')) {
       }
     
       updateVariantInput() {
+        console.log(123);
         const productForms = document.querySelectorAll(
           `#product-form-${this.dataset.section}, #product-form-installment-${this.dataset.section}`
         );
