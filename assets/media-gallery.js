@@ -21,9 +21,7 @@ if (!customElements.get('media-gallery')) {
         });
         if (this.dataset.desktopLayout.includes('thumbnail') && this.mql.matches) this.removeListSemantic();
 
-        
-      }
-      //click variant image
+        //click variant image
         this.elements.thumbnailMedia.forEach((thumbnail)=>{
           // thumbnail.addEventListener('change', this.onVariantChange);
           thumbnail.addEventListener('click',function(){
@@ -31,6 +29,7 @@ if (!customElements.get('media-gallery')) {
             console.log(this.getVariantData().bind(this))
           });
         })
+      }
 
       onSlideChanged(event) {
         const thumbnail = this.elements.thumbnails.querySelector(
