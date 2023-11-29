@@ -8,7 +8,7 @@ if (!customElements.get('media-gallery')) {
           liveRegion: this.querySelector('[id^="GalleryStatus"]'),
           viewer: this.querySelector('[id^="GalleryViewer"]'),
           thumbnails: this.querySelector('[id^="GalleryThumbnails"]'),
-          thumbnailMedia: this.querySelectorAll('.thumbnail-slider ul li'),
+          thumbnailMedia: this.querySelectorAll('[id^="GalleryThumbnails"] ul li'),
         };
         this.mql = window.matchMedia('(min-width: 750px)');
         if (!this.elements.thumbnails) return;
