@@ -26,7 +26,7 @@ if (!customElements.get('media-gallery')) {
           // thumbnail.addEventListener('change', this.onVariantChange);
           thumbnail.addEventListener('click',function(){
             console.log(this.dataset.mediaValue);
-            console.log( this.getVariantData())
+            console.log(this.getVariantData().bind(this))
           });
         })
       }
