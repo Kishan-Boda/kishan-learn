@@ -213,6 +213,7 @@ if (!customElements.get('media-gallery')) {
       }
     
       updateVariantStatuses() {
+        var variantSelector = document.querySelector('variant-radios');
         const selectedOptionOneVariants = this.variantData.filter(
           (variant) => this.querySelector(':checked').value === variant.option1
         );
