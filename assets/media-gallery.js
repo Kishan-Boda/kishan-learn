@@ -194,6 +194,7 @@ if (!customElements.get('media-gallery')) {
         productForms.forEach((productForm) => {
           const input = productForm.querySelector('input[name="id"]');
           input.value = this.currentVariant.id;
+          console.log(input.value);
           input.dispatchEvent(new Event('change', { bubbles: true }));
         });
       }
