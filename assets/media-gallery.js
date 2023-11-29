@@ -8,7 +8,7 @@ if (!customElements.get('media-gallery')) {
           liveRegion: this.querySelector('[id^="GalleryStatus"]'),
           viewer: this.querySelector('[id^="GalleryViewer"]'),
           thumbnails: this.querySelector('[id^="GalleryThumbnails"]'),
-          thumbnailMedia: this.querySelectorAll('[id^="GalleryThumbnails"] ul li button'),
+          thumbnailMedia: this.querySelectorAll('.thumbnail-slider ul li'),
         };
         this.mql = window.matchMedia('(min-width: 750px)');
         if (!this.elements.thumbnails) return;
@@ -24,7 +24,7 @@ if (!customElements.get('media-gallery')) {
         //click variant image
         this.elements.thumbnailMedia.forEach((thumbnail)=>{
           // thumbnail.addEventListener('change', this.onVariantChange);
-          thumbnail.addEventListener('change',function(){
+          thumbnail.addEventListener('click',function(){
             console.log(123);
           });
         })
