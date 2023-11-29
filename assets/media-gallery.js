@@ -393,7 +393,20 @@ if (!customElements.get('media-gallery')) {
       }
 
       updateInputs() {
-        console.log(this.currentVariant);
+        console.log(this.currentVariant.title);
+        const section = this.closest('section');
+        var variantInputs = section.querySelectorAll("variant-radios input");
+        variantInputs.forEach((input)=>{
+          if(input.value == this.currentVariant.title) {
+            input.checked = true;
+          }
+          else {
+            input.checked = false;
+          }
+          
+        })
+  
+        
       }
 
 
