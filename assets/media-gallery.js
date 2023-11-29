@@ -29,6 +29,11 @@ if (!customElements.get('media-gallery')) {
             this.updateMasterId(mediaValue);
             console.log(this.currentVariant);
             if (typeof this.currentVariant !== 'undefined') {
+              this.updateOptions();
+              this.toggleAddButton(true, '', false);
+              this.updatePickupAvailability();
+              this.removeErrorMessage();
+              this.updateVariantStatuses();
             if (!this.currentVariant) {
               this.toggleAddButton(true, '', true);
               this.setUnavailable();
