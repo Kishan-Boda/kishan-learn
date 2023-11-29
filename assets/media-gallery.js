@@ -146,8 +146,9 @@ if (!customElements.get('media-gallery')) {
         this.currentVariant = this.getVariantData().find((variant) => {
           console.log(123);
           return !variant.options
-          const variantValue = (variant, value) => variant.keys(obj).some((key) => {obj[key] === value;return variant;});
-          console.log(variantValue);
+          if(variant.featured_media.id == value) {
+            return variant;
+          }
         });
       }
     
