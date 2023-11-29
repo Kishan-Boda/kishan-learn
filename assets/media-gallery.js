@@ -34,6 +34,7 @@ if (!customElements.get('media-gallery')) {
               this.updatePickupAvailability();
               this.removeErrorMessage();
               // this.updateVariantStatuses();
+              this.updateInputs();
             if (!this.currentVariant) {
               this.toggleAddButton(true, '', true);
               this.setUnavailable();
@@ -391,7 +392,9 @@ if (!customElements.get('media-gallery')) {
         return this.variantData;
       }
 
-
+      updateInputs() {
+        console.log(this.currentVariant);
+      }
 
 
 
