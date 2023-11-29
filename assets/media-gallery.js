@@ -215,9 +215,9 @@ if (!customElements.get('media-gallery')) {
       updateVariantStatuses() {
         var variantSelector = document.querySelector('variant-radios');
         const selectedOptionOneVariants = this.variantData.filter(
-          (variant) => variantSelector.querySelector(':checked').value === variant.option1
+          (variant) => this.querySelector(':checked').value === variant.option1
         );
-        const inputWrappers = [...variantSelector.querySelectorAll('.product-form__input')];
+        const inputWrappers = [...this.querySelectorAll('.product-form__input')];
         inputWrappers.forEach((option, index) => {
           if (index === 0) return;
           const optionInputs = [...option.querySelectorAll('input[type="radio"], option')];
