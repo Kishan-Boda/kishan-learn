@@ -28,7 +28,7 @@ if (!customElements.get('media-gallery')) {
             var mediaValue = event.currentTarget.dataset.mediaValue;
             this.updateMasterId(mediaValue);
             console.log(this.currentVariant);
-            if (!this.currentVariant) {
+            if (typeof this.currentVariant !== 'undefined') {
               this.toggleAddButton(true, '', true);
               this.setUnavailable();
             } else {
