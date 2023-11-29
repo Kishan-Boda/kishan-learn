@@ -25,8 +25,8 @@ if (!customElements.get('media-gallery')) {
         this.elements.thumbnailMedia.forEach((thumbnail)=>{
           // thumbnail.addEventListener('change', this.onVariantChange);
           thumbnail.addEventListener('click',(event)=>{
-            console.log(event.currentTarget.dataset.mediaValue);
-            console.log(this.updateMasterId());
+            var mediaValue = event.currentTarget.dataset.mediaValue;
+            console.log(this.updateMasterId(mediaValue));
           });
         })
       }
@@ -144,7 +144,6 @@ if (!customElements.get('media-gallery')) {
     
       updateMasterId() {
         this.currentVariant = this.getVariantData().find((variant) => {
-          console.log(variant.options);
           return !variant.options
             .map((option, index) => {
               console.log(option, index);
