@@ -25,7 +25,6 @@ if (!customElements.get('media-gallery')) {
         this.elements.thumbnailMedia.forEach((thumbnail)=>{
           // thumbnail.addEventListener('change', this.onVariantChange);
           thumbnail.addEventListener('click',(event)=>{
-            console.log(item);
             console.log(event.currentTarget.dataset.mediaValue);
             console.log(this.getVariantData());
           });
