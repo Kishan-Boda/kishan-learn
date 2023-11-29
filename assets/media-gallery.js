@@ -8,6 +8,7 @@ if (!customElements.get('media-gallery')) {
           liveRegion: this.querySelector('[id^="GalleryStatus"]'),
           viewer: this.querySelector('[id^="GalleryViewer"]'),
           thumbnails: this.querySelector('[id^="GalleryThumbnails"]'),
+          thumbnailMedia: this.querySelectorAll('[id^="GalleryThumbnails"] ul li'),
         };
         this.mql = window.matchMedia('(min-width: 750px)');
         if (!this.elements.thumbnails) return;
@@ -21,12 +22,12 @@ if (!customElements.get('media-gallery')) {
         if (this.dataset.desktopLayout.includes('thumbnail') && this.mql.matches) this.removeListSemantic();
 
         //click variant image
-        // this.elements.thumbnails.forEach((thumbnail)=>{
-        //   // thumbnail.addEventListener('change', this.onVariantChange);
-        //   thumbnail.addEventListener('change',function(){
-        //     console.log(123);
-        //   });
-        // })
+        this.elements.thumbnailMedia.forEach((thumbnail)=>{
+          // thumbnail.addEventListener('change', this.onVariantChange);
+          thumbnail.addEventListener('change',function(){
+            console.log(123);
+          });
+        })
       }
 
       onSlideChanged(event) {
