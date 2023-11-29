@@ -153,6 +153,7 @@ if (!customElements.get('media-gallery')) {
       }
     
       updateMasterId(value) {
+        console.log(value);
         this.currentVariant = this.getVariantData().find((variant) => {
           if(variant.featured_media.id == value) {
             return variant;
