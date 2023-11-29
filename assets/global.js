@@ -979,8 +979,9 @@ class VariantSelects extends HTMLElement {
   }
 
   updateOptions() {
-    console.log(this.querySelectorAll('select'));
+    
     this.options = Array.from(this.querySelectorAll('select'), (select) => select.value);
+    console.log(this.options);
   }
 
   updateMasterId() {
