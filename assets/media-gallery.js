@@ -19,6 +19,14 @@ if (!customElements.get('media-gallery')) {
             .addEventListener('click', this.setActiveMedia.bind(this, mediaToSwitch.dataset.target, false));
         });
         if (this.dataset.desktopLayout.includes('thumbnail') && this.mql.matches) this.removeListSemantic();
+
+        //click variant image
+        this.elements.thumbnails.forEach((thumbnail)=>{
+          // thumbnail.addEventListener('change', this.onVariantChange);
+          thumbnail.addEventListener('change',function(){
+            console.log(123);
+          });
+        })
       }
 
       onSlideChanged(event) {
