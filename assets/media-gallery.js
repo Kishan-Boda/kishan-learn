@@ -26,7 +26,7 @@ if (!customElements.get('media-gallery')) {
           // thumbnail.addEventListener('change', this.onVariantChange);
           thumbnail.addEventListener('click',(event)=>{
             var mediaValue = event.currentTarget.dataset.mediaValue;
-            this.updateMasterId(mediaValue);
+            console.log(this.updateMasterId(mediaValue));
           });
         })
       }
@@ -144,9 +144,6 @@ if (!customElements.get('media-gallery')) {
     
       updateMasterId(value) {
         this.currentVariant = this.getVariantData().find((variant) => {
-          console.log(123);
-          // return !variant.options
-          console.log(variant.options);
           if(variant.featured_media.id == value) {
             return variant;
           }
