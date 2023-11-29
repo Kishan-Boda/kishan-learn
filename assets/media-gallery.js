@@ -29,7 +29,7 @@ if (!customElements.get('media-gallery')) {
             this.updateMasterId(mediaValue);
             console.log(this.currentVariant);
             if (typeof this.currentVariant !== 'undefined') {
-              // this.toggleAddButton(true, '', true);
+              this.toggleAddButton(true, '', true);
               // this.setUnavailable();
             } else {
               // this.updateMedia();
