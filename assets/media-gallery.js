@@ -148,7 +148,6 @@ if (!customElements.get('media-gallery')) {
             return variant;
           }
         });
-        console.log(this.currentVariant);
       }
     
       // updateMedia() {
