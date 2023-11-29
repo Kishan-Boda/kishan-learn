@@ -33,7 +33,7 @@ if (!customElements.get('media-gallery')) {
               this.toggleAddButton(true, '', false);
               this.updatePickupAvailability();
               this.removeErrorMessage();
-              // this.updateVariantStatuses();
+              this.updateVariantStatuses();
             if (!this.currentVariant) {
               this.toggleAddButton(true, '', true);
               this.setUnavailable();
@@ -166,6 +166,8 @@ if (!customElements.get('media-gallery')) {
           if(variant.featured_media.id == value) {
             return variant;
           }
+          else
+            return;
         });
         console.log(this.currentVariant);
        }
