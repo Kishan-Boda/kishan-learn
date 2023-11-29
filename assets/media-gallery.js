@@ -163,11 +163,14 @@ if (!customElements.get('media-gallery')) {
       updateMasterId(value) {
        if(typeof value !== "undefined"){
         this.currentVariant = this.getVariantData().find((variant) => {
-          if(variant.featured_media.id == value) {
-            return variant;
+          if(variant.featured_media) {
+            if(variant.featured_media.id == value) {
+              return variant;
+            }
           }
-          else
+          else {
             return;
+          }
         });
         console.log(this.currentVariant);
        }
