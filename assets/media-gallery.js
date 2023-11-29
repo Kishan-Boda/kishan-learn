@@ -21,12 +21,12 @@ if (!customElements.get('media-gallery')) {
         if (this.dataset.desktopLayout.includes('thumbnail') && this.mql.matches) this.removeListSemantic();
 
         //click variant image
-        this.elements.thumbnails.forEach((thumbnail)=>{
-          // thumbnail.addEventListener('change', this.onVariantChange);
-          thumbnail.addEventListener('change',function(){
-            console.log(123);
-          });
-        })
+        // this.elements.thumbnails.forEach((thumbnail)=>{
+        //   // thumbnail.addEventListener('change', this.onVariantChange);
+        //   thumbnail.addEventListener('change',function(){
+        //     console.log(123);
+        //   });
+        // })
       }
 
       onSlideChanged(event) {
