@@ -144,6 +144,7 @@ if (!customElements.get('media-gallery')) {
     
       updateMasterId(value) {
         this.currentVariant = this.getVariantData().find((variant) => {
+          console.log(123);
           return !variant.options
           const variantValue = (variant, value) => variant.keys(obj).some((key) => {obj[key] === value;return variant;});
           console.log(variantValue);
