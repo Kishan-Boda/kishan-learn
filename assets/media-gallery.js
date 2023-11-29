@@ -142,14 +142,11 @@ if (!customElements.get('media-gallery')) {
         console.log(this.options);
       }
     
-      updateMasterId() {
+      updateMasterId(value) {
         this.currentVariant = this.getVariantData().find((variant) => {
           return !variant.options
-            .map((option, index) => {
-              console.log(option, index);
-              return this.options[index] === option;
-            })
-            .includes(false);
+          const variantValue = (variant, value) => variant.keys(obj).some((key) => {obj[key] === value;return variant});
+          console.log(variantValue);
         });
       }
     
