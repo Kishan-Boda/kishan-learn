@@ -24,9 +24,9 @@ if (!customElements.get('media-gallery')) {
         //click variant image
         this.elements.thumbnailMedia.forEach((thumbnail)=>{
           // thumbnail.addEventListener('change', this.onVariantChange);
-          thumbnail.addEventListener('click',(item)=>{
+          thumbnail.addEventListener('click',(event)=>{
             console.log(item);
-            console.log(item.dataset.mediaValue);
+            console.log(event.currentTarget.dataset.mediaValue);
             console.log(this.getVariantData());
           });
         })
