@@ -27,6 +27,16 @@ if (!customElements.get('media-gallery')) {
           thumbnail.addEventListener('click',(event)=>{
             var mediaValue = event.currentTarget.dataset.mediaValue;
             this.updateMasterId(mediaValue);
+            if (!this.currentVariant) {
+              this.toggleAddButton(true, '', true);
+              this.setUnavailable();
+            } else {
+              // this.updateMedia();
+              this.updateURL();
+              this.updateVariantInput();
+              this.renderProductInfo();
+              this.updateShareUrl();
+            }
           });
         })
       }
@@ -167,7 +177,7 @@ if (!customElements.get('media-gallery')) {
       // }
     
       updateURL() {
-        if (!this.currentVariant || this.dataset.updateUrl === 'false') return;
+        if (!this.currentVariant) return;
         window.history.replaceState({}, '', `${this.dataset.url}?variant=${this.currentVariant.id}`);
       }
     
