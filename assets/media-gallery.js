@@ -26,7 +26,7 @@ if (!customElements.get('media-gallery')) {
           // thumbnail.addEventListener('change', this.onVariantChange);
           thumbnail.addEventListener('click',(event)=>{
             console.log(event.currentTarget.dataset.mediaValue);
-            console.log(this.getVariantData());
+            console.log(this.updateMasterId());
           });
         })
       }
@@ -143,7 +143,6 @@ if (!customElements.get('media-gallery')) {
       }
     
       updateMasterId() {
-        console.log(this.getVariantData());
         this.currentVariant = this.getVariantData().find((variant) => {
           console.log(variant.options);
           return !variant.options
