@@ -26,7 +26,7 @@ if (!customElements.get('media-gallery')) {
           // thumbnail.addEventListener('change', this.onVariantChange);
           thumbnail.addEventListener('click',(event)=>{
             var mediaValue = event.currentTarget.dataset.mediaValue;
-            console.log(this.updateMasterId(mediaValue));
+            this.updateMasterId(mediaValue);
           });
         })
       }
